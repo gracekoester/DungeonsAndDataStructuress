@@ -2,6 +2,10 @@ package com.example.awesomefat.dungeonsanddatastructures;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,5 +31,29 @@ public class MainActivity extends AppCompatActivity {
         s120.takeExit("north");
         s120.takeExit("west");
         csHallway.takeExit("south");
+
+        TextView description= new TextView(this);
+        description.setText(csHallway.toString());
+
+        ScrollView characters = new ScrollView(this);
+        TextView charactersTV = new TextView(this);
+        charactersTV.setText(s120.getPlayer.toString);
+        TextView roomName = new TextView(this);
+        Button east = new Button(this);
+        Button west = new Button(this);
+        Button south = new Button(this);
+        Button north = new Button(this);
+
+
+
+        if(roomName == 'csHallway')
+        {
+            north.setVisibility(View.VISIBLE);
+            east.setVisibility(View.GONE);
+            west.setVisibility(View.GONE);
+            south.setVisibility(View.GONE);
+        }
+
+
     }
 }
